@@ -97,7 +97,21 @@
 
         <!-- Rule 1-2s -->
         <div class="rule-row">
-            <div class="chart-box">[Insert Rule 1-2s Chart Here]</div>
+            <div class="chart-box">
+                <svg viewBox="0 0 300 150" width="100%" height="100%">
+                  <!-- Grid Lines -->
+                  <line x1="20" y1="25" x2="280" y2="25" stroke="#ffcdd2" stroke-dasharray="4"/> <!-- +3SD -->
+                  <line x1="20" y1="50" x2="280" y2="50" stroke="#ffe082" stroke-dasharray="4"/> <!-- +2SD -->
+                  <line x1="20" y1="75" x2="280" y2="75" stroke="#90caf9"/> <!-- Mean -->
+                  <line x1="20" y1="100" x2="280" y2="100" stroke="#ffe082" stroke-dasharray="4"/> <!-- -2SD -->
+                  <line x1="20" y1="125" x2="280" y2="125" stroke="#ffcdd2" stroke-dasharray="4"/> <!-- -3SD -->
+                  <!-- Data Line -->
+                  <polyline points="40,70 80,85 120,65 160,75 200,45 240,80 280,70" fill="none" stroke="#1976d2" stroke-width="2"/>
+                  <!-- Warning Point (+2.2SD) -->
+                  <circle cx="200" cy="45" r="4" fill="#f57c00"/>
+                  <circle cx="120" cy="65" r="3" fill="#1976d2"/>
+                </svg>
+            </div>
             <div class="text-box">
                 <div class="tag warning-tag">WARNING RULE</div>
                 <h2>Rule 1-2s</h2>
@@ -113,7 +127,19 @@
 
         <!-- Rule 1-3s -->
         <div class="rule-row reverse">
-            <div class="chart-box">[Insert Rule 1-3s Chart Here]</div>
+            <div class="chart-box">
+                <svg viewBox="0 0 300 150" width="100%" height="100%">
+                  <line x1="20" y1="25" x2="280" y2="25" stroke="#ffcdd2" stroke-dasharray="4"/>
+                  <line x1="20" y1="50" x2="280" y2="50" stroke="#ffe082" stroke-dasharray="4"/>
+                  <line x1="20" y1="75" x2="280" y2="75" stroke="#90caf9"/> 
+                  <line x1="20" y1="100" x2="280" y2="100" stroke="#ffe082" stroke-dasharray="4"/>
+                  <line x1="20" y1="125" x2="280" y2="125" stroke="#ffcdd2" stroke-dasharray="4"/>
+                  <!-- Data Line -->
+                  <polyline points="40,70 80,80 120,70 160,130 200,70" fill="none" stroke="#1976d2" stroke-width="2"/>
+                  <!-- Rejection Point (-3.2SD) -->
+                  <circle cx="160" cy="130" r="4" fill="#d32f2f"/>
+                </svg>
+            </div>
             <div class="text-box">
                 <div class="tag">STRICT REJECTION</div>
                 <h2>Rule 1-3s</h2>
@@ -128,7 +154,20 @@
 
         <!-- Rule 2-2s -->
         <div class="rule-row">
-            <div class="chart-box">[Insert Rule 2-2s Chart Here]</div>
+            <div class="chart-box">
+                <svg viewBox="0 0 300 150" width="100%" height="100%">
+                  <line x1="20" y1="25" x2="280" y2="25" stroke="#ffcdd2" stroke-dasharray="4"/>
+                  <line x1="20" y1="50" x2="280" y2="50" stroke="#ffe082" stroke-dasharray="4"/>
+                  <line x1="20" y1="75" x2="280" y2="75" stroke="#90caf9"/> 
+                  <line x1="20" y1="100" x2="280" y2="100" stroke="#ffe082" stroke-dasharray="4"/>
+                  <line x1="20" y1="125" x2="280" y2="125" stroke="#ffcdd2" stroke-dasharray="4"/>
+                  <!-- Data Line -->
+                  <polyline points="40,80 80,70 120,40 160,45 200,80" fill="none" stroke="#1976d2" stroke-width="2"/>
+                  <!-- Two consecutive points above +2SD -->
+                  <circle cx="120" cy="40" r="4" fill="#d32f2f"/>
+                  <circle cx="160" cy="45" r="4" fill="#d32f2f"/>
+                </svg>
+            </div>
             <div class="text-box">
                 <div class="tag">STRICT REJECTION</div>
                 <h2>Rule 2-2s</h2>
@@ -143,7 +182,21 @@
 
         <!-- Rule R-4s -->
         <div class="rule-row reverse">
-            <div class="chart-box">[Insert Rule R-4s Chart Here]</div>
+            <div class="chart-box">
+                <svg viewBox="0 0 300 150" width="100%" height="100%">
+                  <line x1="20" y1="25" x2="280" y2="25" stroke="#ffcdd2" stroke-dasharray="4"/>
+                  <line x1="20" y1="50" x2="280" y2="50" stroke="#ffe082" stroke-dasharray="4"/>
+                  <line x1="20" y1="75" x2="280" y2="75" stroke="#90caf9"/> 
+                  <line x1="20" y1="100" x2="280" y2="100" stroke="#ffe082" stroke-dasharray="4"/>
+                  <line x1="20" y1="125" x2="280" y2="125" stroke="#ffcdd2" stroke-dasharray="4"/>
+                  <!-- Data Line -->
+                  <polyline points="40,80 80,70 120,40 160,110 200,75" fill="none" stroke="#1976d2" stroke-width="2"/>
+                  <!-- 4SD Spread -->
+                  <circle cx="120" cy="40" r="4" fill="#d32f2f"/> <!-- +2.2SD -->
+                  <circle cx="160" cy="110" r="4" fill="#d32f2f"/> <!-- -2.1SD -->
+                  <line x1="140" y1="40" x2="140" y2="110" stroke="#d32f2f" stroke-dasharray="2"/> <!-- Spread indicator -->
+                </svg>
+            </div>
             <div class="text-box">
                 <div class="tag">STRICT REJECTION</div>
                 <h2>Rule R-4s</h2>
@@ -158,7 +211,23 @@
 
         <!-- Rules 4-1s & 10x -->
         <div class="rule-row">
-            <div class="chart-box">[Insert Rule 4-1s Chart Here]</div>
+            <div class="chart-box">
+                <svg viewBox="0 0 300 150" width="100%" height="100%">
+                  <line x1="20" y1="25" x2="280" y2="25" stroke="#ffcdd2" stroke-dasharray="4"/>
+                  <line x1="20" y1="50" x2="280" y2="50" stroke="#ffe082" stroke-dasharray="4"/>
+                  <line x1="20" y1="62.5" x2="280" y2="62.5" stroke="#a5d6a7" stroke-dasharray="4"/> <!-- +1SD -->
+                  <line x1="20" y1="75" x2="280" y2="75" stroke="#90caf9"/> 
+                  <line x1="20" y1="100" x2="280" y2="100" stroke="#ffe082" stroke-dasharray="4"/>
+                  <line x1="20" y1="125" x2="280" y2="125" stroke="#ffcdd2" stroke-dasharray="4"/>
+                  <!-- Data Line -->
+                  <polyline points="40,80 80,55 120,60 160,55 200,50 240,80" fill="none" stroke="#1976d2" stroke-width="2"/>
+                  <!-- Four points above +1SD -->
+                  <circle cx="80" cy="55" r="4" fill="#f57c00"/>
+                  <circle cx="120" cy="60" r="4" fill="#f57c00"/>
+                  <circle cx="160" cy="55" r="4" fill="#f57c00"/>
+                  <circle cx="200" cy="50" r="4" fill="#f57c00"/>
+                </svg>
+            </div>
             <div class="text-box">
                 <div class="tag warning-tag">MAINTENANCE TRIGGER</div>
                 <h2>Rules 4-1s & 10x</h2>
