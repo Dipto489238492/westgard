@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Westgard Rules - Single Page PDF</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #eef2f5;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        .a4-canvas {
+            background-color: white;
+            width: 210mm; /* A4 width */
+            min-height: 297mm; /* A4 height */
+            padding: 40px 50px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #1a237e;
+        }
+        .rule-row {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        .rule-row.reverse {
+            flex-direction: row-reverse;
+        }
+        .chart-box {
+            width: 320px;
+            height: 200px;
+            background-color: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-style: italic;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .text-box {
+            flex: 1;
+        }
+        .tag {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #d32f2f;
+            font-weight: 700;
+        }
+        .warning-tag { color: #f57c00; }
+        h2 {
+            margin: 5px 0 15px 0;
+            font-size: 26px;
+            color: #2c3e50;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #444;
+            line-height: 1.4;
+        }
+        li strong {
+            color: #111;
+        }
+        
+        /* Print settings to ensure background colors and layout stay perfect */
+        @media print {
+            body { background: white; padding: 0; }
+            .a4-canvas { box-shadow: none; width: 100%; min-height: auto; padding: 0; }
+            .chart-box { border: 1px solid #ccc !important; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="a4-canvas">
+        <div class="header">
+            <h2>NABL QC Multi-Rules (ISO 15189)</h2>
+        </div>
+
+        <!-- Rule 1-2s -->
+        <div class="rule-row">
+            <div class="chart-box">[Insert Rule 1-2s Chart Here]</div>
+            <div class="text-box">
+                <div class="tag warning-tag">WARNING RULE</div>
+                <h2>Rule 1-2s</h2>
+                <ul>
+                    <li><strong>Definition:</strong> One point exceeds ±2SD.</li>
+                    <li><strong>Status:</strong> Warning only.</li>
+                    <li><strong>Action:</strong> Hold patient results.</li>
+                    <li><strong>Check:</strong> Inspect other control levels.</li>
+                    <li><strong>Outcome:</strong> Accept run if others pass.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Rule 1-3s -->
+        <div class="rule-row reverse">
+            <div class="chart-box">[Insert Rule 1-3s Chart Here]</div>
+            <div class="text-box">
+                <div class="tag">STRICT REJECTION</div>
+                <h2>Rule 1-3s</h2>
+                <ul>
+                    <li><strong>Definition:</strong> One point exceeds ±3SD.</li>
+                    <li><strong>Type:</strong> Random Error.</li>
+                    <li><strong>RCA:</strong> Air bubble or voltage spike.</li>
+                    <li><strong>CAPA:</strong> Re-mix and re-run identical control.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Rule 2-2s -->
+        <div class="rule-row">
+            <div class="chart-box">[Insert Rule 2-2s Chart Here]</div>
+            <div class="text-box">
+                <div class="tag">STRICT REJECTION</div>
+                <h2>Rule 2-2s</h2>
+                <ul>
+                    <li><strong>Definition:</strong> Two consecutive points exceed same 2SD.</li>
+                    <li><strong>Type:</strong> Systematic Error.</li>
+                    <li><strong>RCA:</strong> Reagent decay or calibration drift.</li>
+                    <li><strong>CAPA:</strong> Recalibrate instrument immediately.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Rule R-4s -->
+        <div class="rule-row reverse">
+            <div class="chart-box">[Insert Rule R-4s Chart Here]</div>
+            <div class="text-box">
+                <div class="tag">STRICT REJECTION</div>
+                <h2>Rule R-4s</h2>
+                <ul>
+                    <li><strong>Definition:</strong> 4SD spread between two controls.</li>
+                    <li><strong>Type:</strong> Random Error.</li>
+                    <li><strong>RCA:</strong> Pipetting error or severe instability.</li>
+                    <li><strong>CAPA:</strong> Verify fluidics and QC lot placement.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Rules 4-1s & 10x -->
+        <div class="rule-row">
+            <div class="chart-box">[Insert Rule 4-1s Chart Here]</div>
+            <div class="text-box">
+                <div class="tag warning-tag">MAINTENANCE TRIGGER</div>
+                <h2>Rules 4-1s & 10x</h2>
+                <ul>
+                    <li><strong>Definition:</strong> Prolonged shift on one side.</li>
+                    <li><strong>Type:</strong> Systematic Error.</li>
+                    <li><strong>RCA:</strong> Lamp aging or reagent degradation.</li>
+                    <li><strong>CAPA:</strong> Schedule preventive maintenance.</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
