@@ -48,6 +48,7 @@
             color: #999;
             font-style: italic;
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            overflow: hidden; /* Prevents SVG from spilling out */
         }
         .text-box {
             flex: 1;
@@ -99,47 +100,23 @@
         <div class="rule-row">
             <div class="chart-box">
                 <svg viewBox="0 0 500 380" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-                  <!-- Background Card -->
                   <rect x="10" y="10" width="480" height="360" rx="8" fill="#ffffff" stroke="#eaeded" stroke-width="2"/>
-                  <!-- Title -->
                   <text x="250" y="45" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#455a64" text-anchor="middle">Rule 1-2s Chart Profile</text>
-                  
-                  <!-- Y-Axis Labels & Grid Lines -->
                   <g font-family="Arial, sans-serif" font-size="10" text-anchor="end">
-                    <!-- +3 SD -->
-                    <text x="65" y="84" fill="#ef5350">+3 SD</text>
-                    <line x1="75" y1="80" x2="470" y2="80" stroke="#ef5350" stroke-dasharray="4,4"/>
-                    <!-- +2 SD -->
-                    <text x="65" y="124" fill="#ffa726">+2 SD</text>
-                    <line x1="75" y1="120" x2="470" y2="120" stroke="#ffa726" stroke-dasharray="4,4"/>
-                    <!-- +1 SD -->
-                    <text x="65" y="164" fill="#90caf9">+1 SD</text>
-                    <line x1="75" y1="160" x2="470" y2="160" stroke="#90caf9" stroke-dasharray="4,4"/>
-                    <!-- Mean -->
-                    <text x="65" y="204" font-weight="bold" fill="#000000">Mean</text>
-                    <line x1="75" y1="200" x2="470" y2="200" stroke="#000000" stroke-width="1.5"/>
-                    <!-- -1 SD -->
-                    <text x="65" y="244" fill="#90caf9">-1 SD</text>
-                    <line x1="75" y1="240" x2="470" y2="240" stroke="#90caf9" stroke-dasharray="4,4"/>
-                    <!-- -2 SD -->
-                    <text x="65" y="284" fill="#ffa726">-2 SD</text>
-                    <line x1="75" y1="280" x2="470" y2="280" stroke="#ffa726" stroke-dasharray="4,4"/>
-                    <!-- -3 SD -->
-                    <text x="65" y="324" fill="#ef5350">-3 SD</text>
-                    <line x1="75" y1="320" x2="470" y2="320" stroke="#ef5350" stroke-dasharray="4,4"/>
+                    <text x="65" y="84" fill="#ef5350">+3 SD</text><line x1="75" y1="80" x2="470" y2="80" stroke="#ef5350" stroke-dasharray="4,4"/>
+                    <text x="65" y="124" fill="#ffa726">+2 SD</text><line x1="75" y1="120" x2="470" y2="120" stroke="#ffa726" stroke-dasharray="4,4"/>
+                    <text x="65" y="164" fill="#90caf9">+1 SD</text><line x1="75" y1="160" x2="470" y2="160" stroke="#90caf9" stroke-dasharray="4,4"/>
+                    <text x="65" y="204" font-weight="bold" fill="#000000">Mean</text><line x1="75" y1="200" x2="470" y2="200" stroke="#000000" stroke-width="1.5"/>
+                    <text x="65" y="244" fill="#90caf9">-1 SD</text><line x1="75" y1="240" x2="470" y2="240" stroke="#90caf9" stroke-dasharray="4,4"/>
+                    <text x="65" y="284" fill="#ffa726">-2 SD</text><line x1="75" y1="280" x2="470" y2="280" stroke="#ffa726" stroke-dasharray="4,4"/>
+                    <text x="65" y="324" fill="#ef5350">-3 SD</text><line x1="75" y1="320" x2="470" y2="320" stroke="#ef5350" stroke-dasharray="4,4"/>
                   </g>
-                
-                  <!-- Data Line -->
                   <polyline points="90,190 130,210 170,170 210,230 250,195 290,205 330,160 370,110 410,215 450,190" fill="none" stroke="#03a9f4" stroke-width="2"/>
-                  
-                  <!-- Normal Data Points -->
                   <circle cx="90" cy="190" r="3" fill="#03a9f4"/><circle cx="130" cy="210" r="3" fill="#03a9f4"/>
                   <circle cx="170" cy="170" r="3" fill="#03a9f4"/><circle cx="210" cy="230" r="3" fill="#03a9f4"/>
                   <circle cx="250" cy="195" r="3" fill="#03a9f4"/><circle cx="290" cy="205" r="3" fill="#03a9f4"/>
                   <circle cx="330" cy="160" r="3" fill="#03a9f4"/><circle cx="410" cy="215" r="3" fill="#03a9f4"/>
                   <circle cx="450" cy="190" r="3" fill="#03a9f4"/>
-                  
-                  <!-- Highlighted Warning Point (+2.2SD) -->
                   <circle cx="370" cy="110" r="5" fill="#ffa726"/>
                 </svg>
             </div>
@@ -147,11 +124,11 @@
                 <div class="tag warning-tag">WARNING RULE</div>
                 <h2>Rule 1-2s</h2>
                 <ul>
-                    <li><strong>Definition:</strong> One point exceeds ±2SD.</li>
-                    <li><strong>Status:</strong> Warning only.</li>
-                    <li><strong>Action:</strong> Hold patient results.</li>
-                    <li><strong>Check:</strong> Inspect other control levels.</li>
-                    <li><strong>Outcome:</strong> Accept run if others pass.</li>
+                    <li><strong>Definition:</strong> One point exceeds ±2SD[cite: 8].</li>
+                    <li><strong>Status:</strong> Warning only[cite: 8].</li>
+                    <li><strong>Action:</strong> Hold patient results[cite: 8].</li>
+                    <li><strong>Check:</strong> Inspect other control levels[cite: 8].</li>
+                    <li><strong>Outcome:</strong> Accept run if others pass[cite: 8].</li>
                 </ul>
             </div>
         </div>
@@ -177,7 +154,6 @@
                   <circle cx="250" cy="210" r="3" fill="#03a9f4"/><circle cx="290" cy="190" r="3" fill="#03a9f4"/>
                   <circle cx="370" cy="190" r="3" fill="#03a9f4"/><circle cx="410" cy="215" r="3" fill="#03a9f4"/>
                   <circle cx="450" cy="195" r="3" fill="#03a9f4"/>
-                  <!-- Highlighted Rejection Point (-3.3SD) -->
                   <circle cx="330" cy="335" r="5" fill="#ef5350"/>
                 </svg>
             </div>
@@ -185,10 +161,10 @@
                 <div class="tag">STRICT REJECTION</div>
                 <h2>Rule 1-3s</h2>
                 <ul>
-                    <li><strong>Definition:</strong> One point exceeds ±3SD.</li>
-                    <li><strong>Type:</strong> Random Error.</li>
-                    <li><strong>RCA:</strong> Air bubble or voltage spike.</li>
-                    <li><strong>CAPA:</strong> Re-mix and re-run identical control.</li>
+                    <li><strong>Definition:</strong> One point exceeds ±3SD[cite: 8].</li>
+                    <li><strong>Type:</strong> Random Error[cite: 8].</li>
+                    <li><strong>RCA:</strong> Air bubble or voltage spike[cite: 8].</li>
+                    <li><strong>CAPA:</strong> Re-mix and re-run identical control[cite: 8].</li>
                 </ul>
             </div>
         </div>
@@ -212,7 +188,6 @@
                   <circle cx="90" cy="210" r="3" fill="#03a9f4"/><circle cx="130" cy="180" r="3" fill="#03a9f4"/>
                   <circle cx="170" cy="160" r="3" fill="#03a9f4"/><circle cx="210" cy="190" r="3" fill="#03a9f4"/>
                   <circle cx="330" cy="170" r="3" fill="#03a9f4"/><circle cx="370" cy="190" r="3" fill="#03a9f4"/>
-                  <!-- 2 Consecutive Rejection Points (> +2SD) -->
                   <circle cx="250" cy="110" r="5" fill="#ef5350"/>
                   <circle cx="290" cy="105" r="5" fill="#ef5350"/>
                 </svg>
@@ -221,57 +196,49 @@
                 <div class="tag">STRICT REJECTION</div>
                 <h2>Rule 2-2s</h2>
                 <ul>
-                    <li><strong>Definition:</strong> Two consecutive points exceed same 2SD.</li>
-                    <li><strong>Type:</strong> Systematic Error.</li>
-                    <li><strong>RCA:</strong> Reagent decay or calibration drift.</li>
-                    <li><strong>CAPA:</strong> Recalibrate instrument immediately.</li>
+                    <li><strong>Definition:</strong> Two consecutive points exceed same 2SD[cite: 8].</li>
+                    <li><strong>Type:</strong> Systematic Error[cite: 8].</li>
+                    <li><strong>RCA:</strong> Reagent decay or calibration drift[cite: 8].</li>
+                    <li><strong>CAPA:</strong> Recalibrate instrument immediately[cite: 8].</li>
                 </ul>
             </div>
         </div>
 
-        <!-- Rule R-4s -->
+        <!-- Rule R-4s (FIXED) -->
         <div class="rule-row reverse">
-            <svg viewBox="0 0 500 380" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="10" y="10" width="480" height="360" rx="8" fill="#ffffff" stroke="#eaeded" stroke-width="2"/>
-                  <text x="250" y="45" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#455a64" text-anchor="middle">Rule R-4s Chart Profile</text>
-                  <g font-family="Arial, sans-serif" font-size="10" text-anchor="end">
-                    <text x="65" y="84" fill="#ef5350">+3 SD</text><line x1="75" y1="80" x2="470" y2="80" stroke="#ef5350" stroke-dasharray="4,4"/>
-                    <text x="65" y="124" fill="#ffa726">+2 SD</text><line x1="75" y1="120" x2="470" y2="120" stroke="#ffa726" stroke-dasharray="4,4"/>
-                    <text x="65" y="164" fill="#90caf9">+1 SD</text><line x1="75" y1="160" x2="470" y2="160" stroke="#90caf9" stroke-dasharray="4,4"/>
-                    <text x="65" y="204" font-weight="bold" fill="#000000">Mean</text><line x1="75" y1="200" x2="470" y2="200" stroke="#000000" stroke-width="1.5"/>
-                    <text x="65" y="244" fill="#90caf9">-1 SD</text><line x1="75" y1="240" x2="470" y2="240" stroke="#90caf9" stroke-dasharray="4,4"/>
-                    <text x="65" y="284" fill="#ffa726">-2 SD</text><line x1="75" y1="280" x2="470" y2="280" stroke="#ffa726" stroke-dasharray="4,4"/>
-                    <text x="65" y="324" fill="#ef5350">-3 SD</text><line x1="75" y1="320" x2="470" y2="320" stroke="#ef5350" stroke-dasharray="4,4"/>
-                  </g>
-                  
-                  <!-- Blue line before the spread -->
-                  <polyline points="90,195 130,210 170,180 210,200 250,210 290,290" fill="none" stroke="#03a9f4" stroke-width="2"/>
-                  
-                  <!-- Red line highlighting the 4SD spread -->
-                  <line x1="290" y1="290" x2="330" y2="110" stroke="#ef5350" stroke-width="2"/>
-                  
-                  <!-- Blue line after the spread -->
-                  <polyline points="330,110 370,210 410,220 450,230" fill="none" stroke="#03a9f4" stroke-width="2"/>
-                  
-                  <!-- Normal Data Points -->
-                  <circle cx="90" cy="195" r="3" fill="#03a9f4"/><circle cx="130" cy="210" r="3" fill="#03a9f4"/>
-                  <circle cx="170" cy="180" r="3" fill="#03a9f4"/><circle cx="210" cy="200" r="3" fill="#03a9f4"/>
-                  <circle cx="250" cy="210" r="3" fill="#03a9f4"/><circle cx="370" cy="210" r="3" fill="#03a9f4"/>
-                  <circle cx="410" cy="220" r="3" fill="#03a9f4"/><circle cx="450" cy="230" r="3" fill="#03a9f4"/>
-                  
-                  <!-- Highlighted R-4s Points (Red) -->
-                  <circle cx="290" cy="290" r="5" fill="#ef5350"/>
-                  <circle cx="330" cy="110" r="5" fill="#ef5350"/>
+            <!-- ADDED THIS MISSING WRAPPER DIV -->
+            <div class="chart-box"> 
+                <svg viewBox="0 0 500 380" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="10" y="10" width="480" height="360" rx="8" fill="#ffffff" stroke="#eaeded" stroke-width="2"/>
+                      <text x="250" y="45" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#455a64" text-anchor="middle">Rule R-4s Chart Profile</text>
+                      <g font-family="Arial, sans-serif" font-size="10" text-anchor="end">
+                        <text x="65" y="84" fill="#ef5350">+3 SD</text><line x1="75" y1="80" x2="470" y2="80" stroke="#ef5350" stroke-dasharray="4,4"/>
+                        <text x="65" y="124" fill="#ffa726">+2 SD</text><line x1="75" y1="120" x2="470" y2="120" stroke="#ffa726" stroke-dasharray="4,4"/>
+                        <text x="65" y="164" fill="#90caf9">+1 SD</text><line x1="75" y1="160" x2="470" y2="160" stroke="#90caf9" stroke-dasharray="4,4"/>
+                        <text x="65" y="204" font-weight="bold" fill="#000000">Mean</text><line x1="75" y1="200" x2="470" y2="200" stroke="#000000" stroke-width="1.5"/>
+                        <text x="65" y="244" fill="#90caf9">-1 SD</text><line x1="75" y1="240" x2="470" y2="240" stroke="#90caf9" stroke-dasharray="4,4"/>
+                        <text x="65" y="284" fill="#ffa726">-2 SD</text><line x1="75" y1="280" x2="470" y2="280" stroke="#ffa726" stroke-dasharray="4,4"/>
+                        <text x="65" y="324" fill="#ef5350">-3 SD</text><line x1="75" y1="320" x2="470" y2="320" stroke="#ef5350" stroke-dasharray="4,4"/>
+                      </g>
+                      <polyline points="90,195 130,210 170,180 210,200 250,210 290,290" fill="none" stroke="#03a9f4" stroke-width="2"/>
+                      <line x1="290" y1="290" x2="330" y2="110" stroke="#ef5350" stroke-width="2"/>
+                      <polyline points="330,110 370,210 410,220 450,230" fill="none" stroke="#03a9f4" stroke-width="2"/>
+                      <circle cx="90" cy="195" r="3" fill="#03a9f4"/><circle cx="130" cy="210" r="3" fill="#03a9f4"/>
+                      <circle cx="170" cy="180" r="3" fill="#03a9f4"/><circle cx="210" cy="200" r="3" fill="#03a9f4"/>
+                      <circle cx="250" cy="210" r="3" fill="#03a9f4"/><circle cx="370" cy="210" r="3" fill="#03a9f4"/>
+                      <circle cx="410" cy="220" r="3" fill="#03a9f4"/><circle cx="450" cy="230" r="3" fill="#03a9f4"/>
+                      <circle cx="290" cy="290" r="5" fill="#ef5350"/>
+                      <circle cx="330" cy="110" r="5" fill="#ef5350"/>
                 </svg>
-            </div>
+            </div> <!-- CLOSED THE WRAPPER DIV -->
             <div class="text-box">
                 <div class="tag">STRICT REJECTION</div>
                 <h2>Rule R-4s</h2>
                 <ul>
-                    <li><strong>Definition:</strong> 4SD spread between two controls.</li>
-                    <li><strong>Type:</strong> Random Error.</li>
-                    <li><strong>RCA:</strong> Pipetting error or severe instability.</li>
-                    <li><strong>CAPA:</strong> Verify fluidics and QC lot placement.</li>
+                    <li><strong>Definition:</strong> 4SD spread between two controls[cite: 8].</li>
+                    <li><strong>Type:</strong> Random Error[cite: 8].</li>
+                    <li><strong>RCA:</strong> Pipetting error or severe instability[cite: 8].</li>
+                    <li><strong>CAPA:</strong> Verify fluidics and QC lot placement[cite: 8].</li>
                 </ul>
             </div>
         </div>
@@ -291,16 +258,10 @@
                     <text x="65" y="284" fill="#ffa726">-2 SD</text><line x1="75" y1="280" x2="470" y2="280" stroke="#ffa726" stroke-dasharray="4,4"/>
                     <text x="65" y="324" fill="#ef5350">-3 SD</text><line x1="75" y1="320" x2="470" y2="320" stroke="#ef5350" stroke-dasharray="4,4"/>
                   </g>
-                
-                  <!-- Data Line connecting all points -->
                   <polyline points="90,215 130,190 170,200 210,185 250,215 290,205 330,150 370,140 410,155 450,130" fill="none" stroke="#03a9f4" stroke-width="2"/>
-                  
-                  <!-- Normal Data Points -->
                   <circle cx="90" cy="215" r="3" fill="#03a9f4"/><circle cx="130" cy="190" r="3" fill="#03a9f4"/>
                   <circle cx="170" cy="200" r="3" fill="#03a9f4"/><circle cx="210" cy="185" r="3" fill="#03a9f4"/>
                   <circle cx="250" cy="215" r="3" fill="#03a9f4"/><circle cx="290" cy="205" r="3" fill="#03a9f4"/>
-                  
-                  <!-- 4 Consecutive Points > +1SD (Red) -->
                   <circle cx="330" cy="150" r="5" fill="#ef5350"/>
                   <circle cx="370" cy="140" r="5" fill="#ef5350"/>
                   <circle cx="410" cy="155" r="5" fill="#ef5350"/>
@@ -311,10 +272,10 @@
                 <div class="tag warning-tag">MAINTENANCE TRIGGER</div>
                 <h2>Rules 4-1s & 10x</h2>
                 <ul>
-                    <li><strong>Definition:</strong> Prolonged shift on one side.</li>
-                    <li><strong>Type:</strong> Systematic Error.</li>
-                    <li><strong>RCA:</strong> Lamp aging or reagent degradation.</li>
-                    <li><strong>CAPA:</strong> Schedule preventive maintenance.</li>
+                    <li><strong>Definition:</strong> Prolonged shift on one side[cite: 8].</li>
+                    <li><strong>Type:</strong> Systematic Error[cite: 8].</li>
+                    <li><strong>RCA:</strong> Lamp aging or reagent degradation[cite: 8].</li>
+                    <li><strong>CAPA:</strong> Schedule preventive maintenance[cite: 8].</li>
                 </ul>
             </div>
         </div>
