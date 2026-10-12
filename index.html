@@ -231,19 +231,37 @@
 
         <!-- Rule R-4s -->
         <div class="rule-row reverse">
-            <div class="chart-box">
-                <svg viewBox="0 0 300 150" width="100%" height="100%">
-                  <line x1="20" y1="25" x2="280" y2="25" stroke="#ffcdd2" stroke-dasharray="4"/>
-                  <line x1="20" y1="50" x2="280" y2="50" stroke="#ffe082" stroke-dasharray="4"/>
-                  <line x1="20" y1="75" x2="280" y2="75" stroke="#90caf9"/> 
-                  <line x1="20" y1="100" x2="280" y2="100" stroke="#ffe082" stroke-dasharray="4"/>
-                  <line x1="20" y1="125" x2="280" y2="125" stroke="#ffcdd2" stroke-dasharray="4"/>
-                  <!-- Data Line -->
-                  <polyline points="40,80 80,70 120,40 160,110 200,75" fill="none" stroke="#1976d2" stroke-width="2"/>
-                  <!-- 4SD Spread -->
-                  <circle cx="120" cy="40" r="4" fill="#d32f2f"/> <!-- +2.2SD -->
-                  <circle cx="160" cy="110" r="4" fill="#d32f2f"/> <!-- -2.1SD -->
-                  <line x1="140" y1="40" x2="140" y2="110" stroke="#d32f2f" stroke-dasharray="2"/> <!-- Spread indicator -->
+            <svg viewBox="0 0 500 380" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="10" y="10" width="480" height="360" rx="8" fill="#ffffff" stroke="#eaeded" stroke-width="2"/>
+                  <text x="250" y="45" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#455a64" text-anchor="middle">Rule R-4s Chart Profile</text>
+                  <g font-family="Arial, sans-serif" font-size="10" text-anchor="end">
+                    <text x="65" y="84" fill="#ef5350">+3 SD</text><line x1="75" y1="80" x2="470" y2="80" stroke="#ef5350" stroke-dasharray="4,4"/>
+                    <text x="65" y="124" fill="#ffa726">+2 SD</text><line x1="75" y1="120" x2="470" y2="120" stroke="#ffa726" stroke-dasharray="4,4"/>
+                    <text x="65" y="164" fill="#90caf9">+1 SD</text><line x1="75" y1="160" x2="470" y2="160" stroke="#90caf9" stroke-dasharray="4,4"/>
+                    <text x="65" y="204" font-weight="bold" fill="#000000">Mean</text><line x1="75" y1="200" x2="470" y2="200" stroke="#000000" stroke-width="1.5"/>
+                    <text x="65" y="244" fill="#90caf9">-1 SD</text><line x1="75" y1="240" x2="470" y2="240" stroke="#90caf9" stroke-dasharray="4,4"/>
+                    <text x="65" y="284" fill="#ffa726">-2 SD</text><line x1="75" y1="280" x2="470" y2="280" stroke="#ffa726" stroke-dasharray="4,4"/>
+                    <text x="65" y="324" fill="#ef5350">-3 SD</text><line x1="75" y1="320" x2="470" y2="320" stroke="#ef5350" stroke-dasharray="4,4"/>
+                  </g>
+                  
+                  <!-- Blue line before the spread -->
+                  <polyline points="90,195 130,210 170,180 210,200 250,210 290,290" fill="none" stroke="#03a9f4" stroke-width="2"/>
+                  
+                  <!-- Red line highlighting the 4SD spread -->
+                  <line x1="290" y1="290" x2="330" y2="110" stroke="#ef5350" stroke-width="2"/>
+                  
+                  <!-- Blue line after the spread -->
+                  <polyline points="330,110 370,210 410,220 450,230" fill="none" stroke="#03a9f4" stroke-width="2"/>
+                  
+                  <!-- Normal Data Points -->
+                  <circle cx="90" cy="195" r="3" fill="#03a9f4"/><circle cx="130" cy="210" r="3" fill="#03a9f4"/>
+                  <circle cx="170" cy="180" r="3" fill="#03a9f4"/><circle cx="210" cy="200" r="3" fill="#03a9f4"/>
+                  <circle cx="250" cy="210" r="3" fill="#03a9f4"/><circle cx="370" cy="210" r="3" fill="#03a9f4"/>
+                  <circle cx="410" cy="220" r="3" fill="#03a9f4"/><circle cx="450" cy="230" r="3" fill="#03a9f4"/>
+                  
+                  <!-- Highlighted R-4s Points (Red) -->
+                  <circle cx="290" cy="290" r="5" fill="#ef5350"/>
+                  <circle cx="330" cy="110" r="5" fill="#ef5350"/>
                 </svg>
             </div>
             <div class="text-box">
@@ -261,20 +279,32 @@
         <!-- Rules 4-1s & 10x -->
         <div class="rule-row">
             <div class="chart-box">
-                <svg viewBox="0 0 300 150" width="100%" height="100%">
-                  <line x1="20" y1="25" x2="280" y2="25" stroke="#ffcdd2" stroke-dasharray="4"/>
-                  <line x1="20" y1="50" x2="280" y2="50" stroke="#ffe082" stroke-dasharray="4"/>
-                  <line x1="20" y1="62.5" x2="280" y2="62.5" stroke="#a5d6a7" stroke-dasharray="4"/> <!-- +1SD -->
-                  <line x1="20" y1="75" x2="280" y2="75" stroke="#90caf9"/> 
-                  <line x1="20" y1="100" x2="280" y2="100" stroke="#ffe082" stroke-dasharray="4"/>
-                  <line x1="20" y1="125" x2="280" y2="125" stroke="#ffcdd2" stroke-dasharray="4"/>
-                  <!-- Data Line -->
-                  <polyline points="40,80 80,55 120,60 160,55 200,50 240,80" fill="none" stroke="#1976d2" stroke-width="2"/>
-                  <!-- Four points above +1SD -->
-                  <circle cx="80" cy="55" r="4" fill="#f57c00"/>
-                  <circle cx="120" cy="60" r="4" fill="#f57c00"/>
-                  <circle cx="160" cy="55" r="4" fill="#f57c00"/>
-                  <circle cx="200" cy="50" r="4" fill="#f57c00"/>
+                <svg viewBox="0 0 500 380" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="10" y="10" width="480" height="360" rx="8" fill="#ffffff" stroke="#eaeded" stroke-width="2"/>
+                  <text x="250" y="45" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#455a64" text-anchor="middle">Rule 4-1s Chart Profile</text>
+                  <g font-family="Arial, sans-serif" font-size="10" text-anchor="end">
+                    <text x="65" y="84" fill="#ef5350">+3 SD</text><line x1="75" y1="80" x2="470" y2="80" stroke="#ef5350" stroke-dasharray="4,4"/>
+                    <text x="65" y="124" fill="#ffa726">+2 SD</text><line x1="75" y1="120" x2="470" y2="120" stroke="#ffa726" stroke-dasharray="4,4"/>
+                    <text x="65" y="164" fill="#90caf9">+1 SD</text><line x1="75" y1="160" x2="470" y2="160" stroke="#90caf9" stroke-dasharray="4,4"/>
+                    <text x="65" y="204" font-weight="bold" fill="#000000">Mean</text><line x1="75" y1="200" x2="470" y2="200" stroke="#000000" stroke-width="1.5"/>
+                    <text x="65" y="244" fill="#90caf9">-1 SD</text><line x1="75" y1="240" x2="470" y2="240" stroke="#90caf9" stroke-dasharray="4,4"/>
+                    <text x="65" y="284" fill="#ffa726">-2 SD</text><line x1="75" y1="280" x2="470" y2="280" stroke="#ffa726" stroke-dasharray="4,4"/>
+                    <text x="65" y="324" fill="#ef5350">-3 SD</text><line x1="75" y1="320" x2="470" y2="320" stroke="#ef5350" stroke-dasharray="4,4"/>
+                  </g>
+                
+                  <!-- Data Line connecting all points -->
+                  <polyline points="90,215 130,190 170,200 210,185 250,215 290,205 330,150 370,140 410,155 450,130" fill="none" stroke="#03a9f4" stroke-width="2"/>
+                  
+                  <!-- Normal Data Points -->
+                  <circle cx="90" cy="215" r="3" fill="#03a9f4"/><circle cx="130" cy="190" r="3" fill="#03a9f4"/>
+                  <circle cx="170" cy="200" r="3" fill="#03a9f4"/><circle cx="210" cy="185" r="3" fill="#03a9f4"/>
+                  <circle cx="250" cy="215" r="3" fill="#03a9f4"/><circle cx="290" cy="205" r="3" fill="#03a9f4"/>
+                  
+                  <!-- 4 Consecutive Points > +1SD (Red) -->
+                  <circle cx="330" cy="150" r="5" fill="#ef5350"/>
+                  <circle cx="370" cy="140" r="5" fill="#ef5350"/>
+                  <circle cx="410" cy="155" r="5" fill="#ef5350"/>
+                  <circle cx="450" cy="130" r="5" fill="#ef5350"/>
                 </svg>
             </div>
             <div class="text-box">
